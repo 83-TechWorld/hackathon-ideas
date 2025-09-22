@@ -301,12 +301,11 @@ A **chat-based assistant** that integrates with risk systems, allowing users to 
 
 ## 📐 Architecture (High-Level)
 
-```mermaid
 flowchart TD
-    U[User] -->|Ask Question| UI[Chat UI (React/Slack/MS Teams)]
-    UI --> API[Backend API (FastAPI/Spring Boot)]
-    API --> LLM[LLM Parser (GPT/LLaMA/Mistral)]
-    LLM --> DB[(Risk/KRI Database)]
+    U(User) -->|Ask Question| UI(Chat UI)
+    UI --> API(Backend API - FastAPI/Spring Boot)
+    API --> LLM(LLM Parser - GPT/LLaMA/Mistral)
+    LLM --> DB(Risk/KRI Database)
     DB --> API
     API --> UI
     UI -->|Response| U
